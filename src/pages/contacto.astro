@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+
+<Base title="Contacto" description="Contacto para dudas, errores y solicitudes de los juegos.">
+	<h1>Contacto</h1>
+	<p class="lead">Para dudas, errores o sugerencias sobre cualquiera de mis juegos, escribe a este correo.</p>
+
+	<section class="card">
+		<h2>Correo</h2>
+		<p><a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></p>
+		<p>Si tu consulta es sobre un error, indica el juego y la versión de la app.</p>
+	</section>
+
+	<h2>Antes de escribir</h2>
+	<ul>
+		<li>Si tu duda es sobre datos y privacidad, la respuesta está en la <a href={import.meta.env.BASE_URL.replace(/\/?$/, '/') + 'privacidad/'}>política de privacidad</a>.</li>
+		<li>Para reportar un error, dinos el modelo del móvil, la versión de Android y qué estabas haciendo.</li>
+	</ul>
+</Base>

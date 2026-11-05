@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import { GAMES, type Game } from '../../data/games';
+
+export function getStaticPaths() {
+	return GAMES.map((game) => ({ params: { slug: game.slug }, props: { game } }));
+}
+
+interface Props {
+	game: Game;
+}
+
+const { game } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const store = `https://play.google.com/store/apps/details?id=${game.packageId}`;
+---
+
+<Base title={game.name} description={game.tagline}>
+	<p><a href={`${base}`}>← Todos los juegos</a></p>
+	<h1>{game.name}</h1>
+	<p class="lead">{game.tagline}</p>
+
+	{game.description.map((paragraph) => <p>{paragraph}</p>)}
+
+	<h2>Características</h2>
+	<ul>
+		{game.features.map((feature) => <li>{feature}</li>)}
+	</ul>
+
+	<section class="card">
+		{game.published ? (
+			<a class="button" href={store}>Descargar en Google Play</a>
+		) : (
+			<span class="soon">Próximamente en Google Play</span>
+		)}
+	</section>
+
+	<p>Dudas o errores: <a href={`${base}contacto/`}>escríbeme</a>. Para saber qué datos usa la app, lee la <a href={`${base}privacidad/`}>política de privacidad</a>.</p>
+</Base>

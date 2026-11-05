@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<Base title="Política de privacidad" description="Qué datos usan los juegos de Juanjo Seguí y cómo se gestionan.">
+	<h1>Política de privacidad</h1>
+	<p class="lead">Última actualización: {SITE.lastUpdated}</p>
+
+	<p>
+		Esta política cubre los juegos para Android de {SITE.author}: <strong>Skyfall Slinger</strong>,
+		<strong>Arena Heroes</strong> y <strong>Block Colors</strong>.
+	</p>
+
+	<h2>Responsable</h2>
+	<p>{SITE.author}, contacto: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
+
+	<h2>Resumen</h2>
+	<ul>
+		<li>Las apps no piden cuenta, no tienen registro ni inicio de sesión.</li>
+		<li>No muestran publicidad ni usan servicios de seguimiento o analítica de terceros.</li>
+		<li>No recogen nombre, correo, ubicación, contactos, fotos ni datos de pago.</li>
+		<li>La única transmisión de datos posible es el ranking global de Block Colors, descrito abajo.</li>
+	</ul>
+
+	<h2>Datos guardados en tu móvil</h2>
+	<p>
+		Los juegos guardan en el propio dispositivo los récords, el progreso de las fases y los ajustes.
+		Esos datos no salen del móvil. Se borran al desinstalar el juego o al borrar los datos de la app desde los ajustes de Android.
+	</p>
+
+	<h2>Skyfall Slinger y Arena Heroes</h2>
+	<p>
+		No se conectan a internet ni envían información a ningún servidor. La vibración se usa para dar respuesta al tocar.
+	</p>
+
+	<h2>Block Colors</h2>
+	<p>
+		Block Colors guarda en el móvil un identificador anónimo generado al azar, tus mejores puntuaciones y la lista de partidas
+		pendientes de enviar. Si el ranking global está activo, al terminar una partida se envía a nuestro servidor de estadísticas:
+	</p>
+	<ul>
+		<li>el identificador anónimo (no está ligado a tu nombre ni a tu cuenta de Google);</li>
+		<li>el modo de juego, la puntuación, las líneas, el nivel alcanzado y la duración de la partida;</li>
+		<li>la versión de la app.</li>
+	</ul>
+	<p>
+		No se envían datos del móvil ni del usuario más allá de lo indicado. Si no hay conexión, las partidas se quedan en el móvil y se
+		envían cuando vuelva. Puedes dejar de enviarlas desinstalando la app.
+	</p>
+
+	<h2>Permisos</h2>
+	<ul>
+		<li><strong>Internet</strong> (solo Block Colors): para enviar las partidas al ranking global.</li>
+		<li><strong>Vibración</strong> (Skyfall Slinger, Arena Heroes): respuesta háptica al tocar.</li>
+	</ul>
+
+	<h2>Tus derechos</h2>
+	<p>
+		Puedes pedir el acceso, la rectificación o la supresión de cualquier dato que consideres personal escribiendo a
+		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Si los datos están solo en tu móvil, basta con desinstalar la app.
+	</p>
+
+	<h2>Cambios</h2>
+	<p>Si esta política cambia, se actualizará esta página y la fecha de arriba.</p>
+
+	<p><a href={base}>← Volver a los juegos</a></p>
+</Base>
