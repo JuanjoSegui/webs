@@ -1,9 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Sin dominio propio la web vive en https://juanjosegui.github.io/webs/.
-// Con dominio propio: SITE_URL=https://tudominio.es BASE_PATH=/ npm run build
+// Dominio propio: https://juanjosegui.es (ver public/CNAME).
+// Para volver a la URL de GitHub: SITE_URL=https://juanjosegui.github.io BASE_PATH=/webs npm run build
 export default defineConfig({
-	site: process.env.SITE_URL ?? 'https://juanjosegui.github.io',
-	base: process.env.BASE_PATH ?? '/webs',
+	site: process.env.SITE_URL ?? 'https://juanjosegui.es',
+	base: process.env.BASE_PATH ?? '/',
 });

@@ -21,11 +21,11 @@ Cada push a `main` despliega la web con `.github/workflows/deploy.yml`.
 
 Primera vez: en el repositorio, Settings → Pages → Source: **GitHub Actions**.
 
-La web queda en `https://juanjosegui.github.io/webs/`. Para un dominio propio, ver la sección siguiente.
+La web queda en `https://juanjosegui.es` (dominio propio, fichero `public/CNAME`).
 
-## Dominio propio
+## Dominio
 
-1. En Settings → Pages → Custom domain, escribe el dominio y guarda (GitHub crea el fichero CNAME).
-2. En `.github/workflows/deploy.yml` y en el build, usa `SITE_URL=https://tudominio.es` y `BASE_PATH=/`.
-   Por ejemplo, en el paso de build del workflow: `run: npm run build` → `run: SITE_URL=https://tudominio.es BASE_PATH=/ npm run build`.
-3. Marca "Enforce HTTPS" cuando esté disponible.
+- DNS: cuatro registros A del dominio raíz hacia 185.199.108.153–111.153 y un CNAME `www` hacia `juanjosegui.github.io`.
+- Settings → Pages → Custom domain: `juanjosegui.es`. Activa "Enforce HTTPS" cuando GitHub lo permita.
+- `astro.config.mjs` ya usa `https://juanjosegui.es` y base `/`. Si vuelves a la URL de GitHub, usa
+  `SITE_URL=https://juanjosegui.github.io BASE_PATH=/webs npm run build`.
