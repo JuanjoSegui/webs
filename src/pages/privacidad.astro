@@ -20,7 +20,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 	<ul>
 		<li>Las apps no piden cuenta, no tienen registro ni inicio de sesión.</li>
 		<li>Block Colors envía a nuestro servidor los datos de cada partida terminada (ver abajo).</li>
-		<li>Los juegos que muestran anuncios usan Google AdMob (ver el apartado de anuncios).</li>
+		<li>Todos los juegos muestran anuncios de Google AdMob. Se pueden quitar con una compra dentro de la app (ver los apartados de anuncios y compras).</li>
 		<li>No recogemos nombre, correo, ubicación, contactos, fotos ni datos de pago.</li>
 	</ul>
 
@@ -47,7 +47,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 	<h2>Anuncios</h2>
 	<p>
-		Algunos juegos muestran anuncios de <strong>Google AdMob</strong>. Para elegirlos, AdMob usa el identificador publicitario
+		Todos los juegos muestran anuncios de <strong>Google AdMob</strong>. Para elegirlos, AdMob usa el identificador publicitario
 		de tu Android y datos técnicos del dispositivo y de la conexión. Con ellos puede mostrar anuncios personalizados según tu actividad
 		en otras apps y sitios web.
 	</p>
@@ -57,10 +57,23 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 		<li>Los datos que recoge Google se rigen por su propia política: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.</li>
 	</ul>
 
+	<h2>Compra para quitar los anuncios</h2>
+	<p>
+		Puedes pagar una vez para quitar los anuncios de un juego. El pago lo gestiona <strong>Google Play</strong>: nosotros no vemos
+		ni guardamos tu método de pago, tu tarjeta ni tu cuenta bancaria. Google nos confirma que la compra existe y el juego
+		deja de cargar anuncios. Si cambias de móvil o reinstalas la app, puedes recuperar la compra con tu cuenta de Google desde
+		la propia app (restaurar compras).
+	</p>
+	<p>
+		El juego guarda en el móvil que la compra está hecha para no volver a mostrar anuncios. Las condiciones de devolución las
+		fija Google Play.
+	</p>
+
 	<h2>Permisos</h2>
 	<ul>
-		<li><strong>Internet</strong> (Block Colors): para enviar las estadísticas de partida y, cuando haya, cargar anuncios.</li>
-		<li><strong>ID de publicidad</strong> (juegos con anuncios): lo añade AdMob y lo usa para los anuncios, como se explica arriba.</li>
+		<li><strong>Internet</strong>: para cargar anuncios en todos los juegos y, en Block Colors, para enviar las estadísticas de partida.</li>
+		<li><strong>ID de publicidad</strong>: lo añade AdMob y lo usa para los anuncios, como se explica arriba.</li>
+		<li><strong>Facturación de Google Play</strong>: lo necesita la app para gestionar la compra que quita los anuncios.</li>
 		<li><strong>Vibración</strong> (Skyfall Slinger, Arena Heroes): respuesta háptica al tocar.</li>
 	</ul>
 
