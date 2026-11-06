@@ -2,5 +2,5 @@
 export const SITE = {
 	author: 'Juanjo Seguí',
 	contactEmail: 'juanjoseseguiborja@gmail.com',
-	lastUpdated: '2026-11-05',
+	lastUpdated: '2026-11-06',
 };

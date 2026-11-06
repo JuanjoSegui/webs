@@ -19,26 +19,21 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 	<h2>Resumen</h2>
 	<ul>
 		<li>Las apps no piden cuenta, no tienen registro ni inicio de sesión.</li>
-		<li>No muestran publicidad ni usan servicios de seguimiento o analítica de terceros.</li>
-		<li>No recogen nombre, correo, ubicación, contactos, fotos ni datos de pago.</li>
-		<li>La única transmisión de datos posible es el ranking global de Block Colors, descrito abajo.</li>
+		<li>Block Colors envía a nuestro servidor los datos de cada partida terminada (ver abajo).</li>
+		<li>Los juegos que muestran anuncios usan Google AdMob (ver el apartado de anuncios).</li>
+		<li>No recogemos nombre, correo, ubicación, contactos, fotos ni datos de pago.</li>
 	</ul>
 
 	<h2>Datos guardados en tu móvil</h2>
 	<p>
 		Los juegos guardan en el propio dispositivo los récords, el progreso de las fases y los ajustes.
-		Esos datos no salen del móvil. Se borran al desinstalar el juego o al borrar los datos de la app desde los ajustes de Android.
+		Estos datos se borran al desinstalar el juego o al borrar los datos de la app desde los ajustes de Android.
 	</p>
 
-	<h2>Skyfall Slinger y Arena Heroes</h2>
+	<h2>Block Colors: estadísticas de partida</h2>
 	<p>
-		No se conectan a internet ni envían información a ningún servidor. La vibración se usa para dar respuesta al tocar.
-	</p>
-
-	<h2>Block Colors</h2>
-	<p>
-		Block Colors guarda en el móvil un identificador anónimo generado al azar, tus mejores puntuaciones y la lista de partidas
-		pendientes de enviar. Si el ranking global está activo, al terminar una partida se envía a nuestro servidor de estadísticas:
+		Block Colors guarda en el móvil un identificador anónimo generado al azar, tus mejores puntuaciones y las partidas pendientes de enviar.
+		Al terminar una partida, la app envía a nuestro servidor de estadísticas globales:
 	</p>
 	<ul>
 		<li>el identificador anónimo (no está ligado a tu nombre ni a tu cuenta de Google);</li>
@@ -46,20 +41,34 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 		<li>la versión de la app.</li>
 	</ul>
 	<p>
-		No se envían datos del móvil ni del usuario más allá de lo indicado. Si no hay conexión, las partidas se quedan en el móvil y se
-		envían cuando vuelva. Puedes dejar de enviarlas desinstalando la app.
+		Como en cualquier conexión a internet, el servidor recibe la dirección IP del dispositivo. No enviamos más datos del móvil ni del usuario.
+		Si no hay conexión, las partidas se quedan en el móvil y se envían cuando vuelva. Para dejar de enviarlas, desinstala la app.
 	</p>
+
+	<h2>Anuncios</h2>
+	<p>
+		Algunos juegos muestran anuncios de <strong>Google AdMob</strong>. Para elegirlos, AdMob usa el identificador publicitario
+		de tu Android y datos técnicos del dispositivo y de la conexión. Con ellos puede mostrar anuncios personalizados según tu actividad
+		en otras apps y sitios web.
+	</p>
+	<ul>
+		<li>En el Espacio Económico Europeo, Suiza y Reino Unido, antes de mostrar anuncios aparece un formulario de consentimiento de Google. Si no consientes, verás anuncios no personalizados.</li>
+		<li>Puedes restablecer tu identificador publicitario o desactivar los anuncios personalizados en los ajustes de Google o de Android (Privacidad → Anuncios).</li>
+		<li>Los datos que recoge Google se rigen por su propia política: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.</li>
+	</ul>
 
 	<h2>Permisos</h2>
 	<ul>
-		<li><strong>Internet</strong> (solo Block Colors): para enviar las partidas al ranking global.</li>
+		<li><strong>Internet</strong> (Block Colors): para enviar las estadísticas de partida y, cuando haya, cargar anuncios.</li>
+		<li><strong>ID de publicidad</strong> (juegos con anuncios): lo añade AdMob y lo usa para los anuncios, como se explica arriba.</li>
 		<li><strong>Vibración</strong> (Skyfall Slinger, Arena Heroes): respuesta háptica al tocar.</li>
 	</ul>
 
 	<h2>Tus derechos</h2>
 	<p>
 		Puedes pedir el acceso, la rectificación o la supresión de cualquier dato que consideres personal escribiendo a
-		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Si los datos están solo en tu móvil, basta con desinstalar la app.
+		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Los datos guardados solo en tu móvil se borran desinstalando la app.
+		Los datos que recoge Google para los anuncios se gestionan con Google, como se indica arriba.
 	</p>
 
 	<h2>Cambios</h2>
