@@ -27,6 +27,8 @@ const store = `https://play.google.com/store/apps/details?id=${game.packageId}`;
 		{game.features.map((feature) => <li>{feature}</li>)}
 	</ul>
 
+	<p>Incluye anuncios. Se pueden quitar con una compra única dentro de la app.</p>
+
 	<section class="card">
 		{game.published ? (
 			<a class="button" href={store}>Descargar en Google Play</a>

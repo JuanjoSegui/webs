@@ -4,88 +4,98 @@ import { SITE } from '../data/site';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
-<Base title="Política de privacidad" description="Qué datos usan los juegos de Juanjo Seguí y cómo se gestionan.">
+<Base title="Política de privacidad" description="Qué datos usan las apps de Juanjo Seguí y cómo se gestionan.">
 	<h1>Política de privacidad</h1>
 	<p class="lead">Última actualización: {SITE.lastUpdated}</p>
 
 	<p>
-		Esta política cubre los juegos para Android de {SITE.author}: <strong>Skyfall Slinger</strong>,
-		<strong>Arena Heroes</strong> y <strong>Block Colors</strong>.
+		Esta política cubre todas las apps para Android e iOS publicadas por {SITE.author}. Si una app tiene
+		un tratamiento de datos distinto, tendrá su propia política dentro de esta sección.
 	</p>
 
 	<h2>Responsable</h2>
-	<p>{SITE.author}, contacto: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
+	<p>{SITE.legalName}, contacto: <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.</p>
 
 	<h2>Resumen</h2>
 	<ul>
-		<li>Las apps no piden cuenta, no tienen registro ni inicio de sesión.</li>
-		<li>Block Colors envía a nuestro servidor los datos de cada partida terminada (ver abajo).</li>
-		<li>Todos los juegos muestran anuncios de Google AdMob. Se pueden quitar con una compra dentro de la app (ver los apartados de anuncios y compras).</li>
-		<li>No recogemos nombre, correo, ubicación, contactos, fotos ni datos de pago.</li>
+		<li>Las apps no piden cuenta, ni contraseña, ni registro.</li>
+		<li>Las apps muestran anuncios de Google AdMob. Se pueden quitar con una compra dentro de la app.</li>
+		<li>No pedimos permisos de cámara, micrófono, contactos ni ubicación precisa.</li>
+		<li>No vendemos datos personales.</li>
 	</ul>
 
-	<h2>Datos guardados en tu móvil</h2>
+	<h2>Datos guardados en tu dispositivo</h2>
 	<p>
-		Los juegos guardan en el propio dispositivo los récords, el progreso de las fases y los ajustes.
-		Estos datos se borran al desinstalar el juego o al borrar los datos de la app desde los ajustes de Android.
+		Las apps guardan en el propio dispositivo los récords, el progreso, los ajustes y si has comprado la eliminación de anuncios.
+		Estos datos no salen del dispositivo, salvo lo indicado en los apartados siguientes. Se borran al desinstalar la app o al borrar
+		sus datos desde los ajustes del sistema.
 	</p>
 
-	<h2>Block Colors: estadísticas de partida</h2>
+	<h2>Rankings y estadísticas</h2>
 	<p>
-		Block Colors guarda en el móvil un identificador anónimo generado al azar, tus mejores puntuaciones y las partidas pendientes de enviar.
-		Al terminar una partida, la app envía a nuestro servidor de estadísticas globales:
+		Algunas apps tienen un ranking global. Cuando lo tienen, envían a nuestro servidor los datos de cada partida terminada
+		(por ejemplo, la puntuación y la duración) junto con un identificador aleatorio generado en tu dispositivo. Ese identificador no
+		está ligado a tu nombre, tu cuenta de Google o Apple ni a tu ID de publicidad.
 	</p>
-	<ul>
-		<li>el identificador anónimo (no está ligado a tu nombre ni a tu cuenta de Google);</li>
-		<li>el modo de juego, la puntuación, las líneas, el nivel alcanzado y la duración de la partida;</li>
-		<li>la versión de la app.</li>
-	</ul>
 	<p>
-		Como en cualquier conexión a internet, el servidor recibe la dirección IP del dispositivo. No enviamos más datos del móvil ni del usuario.
-		Si no hay conexión, las partidas se quedan en el móvil y se envían cuando vuelva. Para dejar de enviarlas, desinstala la app.
+		Si eliges un nombre para el ranking, se muestra públicamente junto a tu puntuación. Si lo dejas vacío, aparecerás como anónimo.
+		Como en cualquier conexión a internet, el servidor recibe la dirección IP del dispositivo.
+		La política de cada app con ranking indica los datos exactos que envía.
 	</p>
 
 	<h2>Anuncios</h2>
 	<p>
-		Todos los juegos muestran anuncios de <strong>Google AdMob</strong>. Para elegirlos, AdMob usa el identificador publicitario
-		de tu Android y datos técnicos del dispositivo y de la conexión. Con ellos puede mostrar anuncios personalizados según tu actividad
-		en otras apps y sitios web.
+		Las apps muestran anuncios de <strong>Google AdMob</strong>. Google y sus socios pueden usar el identificador de publicidad de tu
+		dispositivo, datos sobre los anuncios que ves, interacciones con ellos, tu ubicación aproximada (derivada de tu IP) y datos de
+		diagnóstico para mostrar y medir los anuncios, incluidos los personalizados. Más información en
+		<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>.
 	</p>
 	<ul>
-		<li>En el Espacio Económico Europeo, Suiza y Reino Unido, antes de mostrar anuncios aparece un formulario de consentimiento de Google. Si no consientes, verás anuncios no personalizados.</li>
-		<li>Puedes restablecer tu identificador publicitario o desactivar los anuncios personalizados en los ajustes de Google o de Android (Privacidad → Anuncios).</li>
-		<li>Los datos que recoge Google se rigen por su propia política: <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.</li>
+		<li><strong>iOS:</strong> la app pide el permiso de seguimiento de Apple (App Tracking Transparency). Solo se usa el identificador de publicidad si lo permites.</li>
+		<li><strong>Unión Europea y Reino Unido:</strong> antes de mostrar anuncios aparece un formulario de consentimiento de Google (UMP). Puedes cambiar tu decisión en cualquier momento desde la opción «Privacidad de anuncios» de la app, cuando aparezca.</li>
+		<li><strong>Limitar anuncios personalizados:</strong> en iOS, Ajustes → Privacidad y seguridad → Seguimiento; en Android, Ajustes → Google → Anuncios.</li>
 	</ul>
 
 	<h2>Compra para quitar los anuncios</h2>
 	<p>
-		Puedes pagar una vez para quitar los anuncios de un juego. El pago lo gestiona <strong>Google Play</strong>: nosotros no vemos
-		ni guardamos tu método de pago, tu tarjeta ni tu cuenta bancaria. Google nos confirma que la compra existe y el juego
-		deja de cargar anuncios. Si cambias de móvil o reinstalas la app, puedes recuperar la compra con tu cuenta de Google desde
-		la propia app (restaurar compras).
+		Puedes pagar una vez para quitar los anuncios de una app. El pago lo procesan <strong>Apple (App Store)</strong> o
+		<strong>Google (Google Play)</strong>. No recibimos ni guardamos tus datos de pago: solo sabemos si la compra se ha completado,
+		para quitar los anuncios.
 	</p>
 	<p>
-		El juego guarda en el móvil que la compra está hecha para no volver a mostrar anuncios. Las condiciones de devolución las
-		fija Google Play.
+		En el dispositivo se guarda que los anuncios están quitados. Si cambias de dispositivo o reinstalas la app, puedes recuperar la
+		compra desde la propia app con «Restaurar compras».
 	</p>
 
-	<h2>Permisos</h2>
-	<ul>
-		<li><strong>Internet</strong>: para cargar anuncios en todos los juegos y, en Block Colors, para enviar las estadísticas de partida.</li>
-		<li><strong>ID de publicidad</strong>: lo añade AdMob y lo usa para los anuncios, como se explica arriba.</li>
-		<li><strong>Facturación de Google Play</strong>: lo necesita la app para gestionar la compra que quita los anuncios.</li>
-		<li><strong>Vibración</strong> (Skyfall Slinger, Arena Heroes): respuesta háptica al tocar.</li>
-	</ul>
-
-	<h2>Tus derechos</h2>
+	<h2>Menores</h2>
 	<p>
-		Puedes pedir el acceso, la rectificación o la supresión de cualquier dato que consideres personal escribiendo a
-		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Los datos guardados solo en tu móvil se borran desinstalando la app.
-		Los datos que recoge Google para los anuncios se gestionan con Google, como se indica arriba.
+		Las apps no están dirigidas a menores de 13 años (ni de 16 en los países de la Unión Europea que lo exigen), y no usamos
+		publicidad personalizada en apps dirigidas a niños.
+	</p>
+
+	<h2>Base legal y tus derechos</h2>
+	<p>
+		Para usuarios de la Unión Europea y el Reino Unido: la base legal de la publicidad personalizada es tu consentimiento, y la de
+		los rankings es la prestación del servicio que eliges al usarlo. Puedes pedir el acceso, la rectificación, la supresión, la
+		oposición y la portabilidad de tus datos, y retirar tu consentimiento en cualquier momento, escribiendo a
+		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Si no te parece bien nuestra respuesta, puedes reclamar ante la
+		Agencia Española de Protección de Datos (<a href="https://www.aepd.es" rel="noopener">aepd.es</a>) u otra autoridad de tu país.
+	</p>
+	<p>
+		Google puede tratar datos fuera de la Unión Europea, con las garantías que Google establece para ello.
+	</p>
+
+	<h2>Conservación</h2>
+	<p>
+		Los datos del ranking se conservan mientras la app siga activa en el servidor. Puedes pedir su borrado escribiendo a
+		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> indicando la app y tu nombre en el ranking.
+		Los datos de anuncios los gestiona Google según su política.
 	</p>
 
 	<h2>Cambios</h2>
-	<p>Si esta política cambia, se actualizará esta página y la fecha de arriba.</p>
+	<p>
+		Podemos actualizar esta política. La fecha de arriba indica la última versión. Los cambios importantes se anunciarán en la app o en su ficha de la tienda.
+	</p>
 
 	<p><a href={base}>← Volver a los juegos</a></p>
 </Base>
